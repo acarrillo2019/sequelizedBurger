@@ -1,0 +1,49 @@
+<div class = "container">
+	<div class = "bimbotron">
+		{{!-- <div class = "jumbotrondiv"> --}}
+			<div><h1 class="align-middle text-center display-4 title">Yum Yum Burger!</h1></div>
+		{{!-- </div> --}}
+	</div>
+
+    	{{!-- Available Burgers --}}
+	<div class="row style="width:80%;">
+		<div class="col-md align-items-center justify-content-center sect">
+			<h2 class="text-center">Menu</h2>
+			<hr>
+			{{#each burgers}}
+				{{#unless devoured}}
+					{{> burgers/burger-block eaten=false}}
+				{{/unless}}
+			{{/each}}
+		</div>{{!-- Burgers that have been devoured --}}
+		<div class="col-md align-items-center justify-content-center sect">
+			<h2 class="text-center">Devoured</h2>
+			<hr>
+			{{#each burgers}}
+				{{#if devoured}}
+					{{> burgers/burger-block eaten=true}}
+				{{/if}}
+			{{/each}}
+		</div>
+	</div>
+
+    {{!-- Alert element --}}
+	<div class="alert alert-danger collapse mt-2" id="burgerAlert" role="alert">
+		<a href="#" class="close">&times;</a>
+		<strong>Hey!</strong> Please enter a burger name.
+	</div>
+	
+    {{!-- Add a burger --}}
+	<div class="row  d-flex justify-content-center mt-2 bork">
+		<form>
+			<div class="form-row align-items-center">
+				<div class="col-auto">
+					<input type="text" class="form-control form-control-lg validate mb-2" id="burgerInput" placeholder="Add a Burger">
+				</div>
+				<div class="col">
+					<img class="add-burger" src="assets/img/plus_32x32.png">
+    		</div>
+  		</div>
+		</form>
+	</div>
+</div>

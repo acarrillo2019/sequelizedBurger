@@ -1,0 +1,5 @@
+{{#if eaten}}
+	<p class="eaten"><img class="minus" src="assets/img/minus_32x32.png"> {{burger_name}} <img data-id="{{this.id}}" class="delete-burger" align="right" src="assets/img/32x32.png"</p>
+{{else}}
+	<p class="burger"><img data-id="{{this.id}}" class="eat-burger" src="assets/img/burger.png"> {{burger_name}}</p>
+{{/if}}

@@ -1,0 +1,30 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "node": "10.16.3",
+    "npm": "6.9.0"
+    },
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "watch":"nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acarrillo2019/burger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acarrillo2019/burger/issues"
+  },
+  "homepage": "https://github.com/acarrillo2019/burger#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mysql": "^2.18.1"
+  }
+}

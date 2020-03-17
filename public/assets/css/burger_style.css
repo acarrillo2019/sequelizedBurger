@@ -1,0 +1,225 @@
+.bimbotron {
+    color: yellow;
+    font-size: 2rem;
+    min-width: 200px;
+    min-height: 300px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  body {
+    color: yellow;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 2rem;
+    background-image: url(../img/ilya-mashkov-_qxbJUr9RqI-unsplash.jpg);
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: rgb(61, 61, 61);
+  background-position-y: -140px;
+  }
+
+  .eat-burger:hover, .add-burger:hover, .delete-burger:hover {
+    opacity: 0.8;
+  }
+  
+  .title {
+    font-size: 6rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  .eaten {
+    text-align: center;
+    height: 128px;
+    padding: 36px;
+  }
+
+  .burger {
+    text-align: center;
+  }
+
+  .alert {
+    font-size: 2rem;
+  }
+
+  .add-burger {
+    height: 40px;
+    position: absolute;
+    top: -22px;
+  }
+
+  .delete-burger {
+    position: relative;
+    top: 9px;
+    right: 73px;
+    height: 32px;
+  }
+
+
+  @media only screen and (max-width: 1410px) {
+    body {
+      font-family: 'Alfa Slab One', cursive;
+      font-size: 4rem;
+      background-image: url(../img/ilya-mashkov-_qxbJUr9RqI-unsplash.jpg);
+      background-size: 118%;
+      background-position: center;
+      background-position-y: -43px;
+    }
+
+    .delete-burger {
+      top: 9px;
+      right: 75px;
+      height: 32px;
+    }
+
+
+  }
+
+
+  @media only screen and (max-width: 1024px) {
+    body {
+      font-family: 'Alfa Slab One', cursive;
+      font-size: 4rem;
+      background-image: url(../img/ilya-mashkov-_qxbJUr9RqI-unsplash.jpg);
+      background-size: 200%;
+      height: 100%;
+      overflow: visible;
+      background-position: top;
+    }
+
+    .delete-burger {
+      top: 9px;
+      right: 75px;
+      height: 32px;
+    }
+
+  }
+
+  @media only screen and (max-width: 600px) {
+    body {
+      font-family: 'Alfa Slab One', cursive;
+      font-size: 4rem;
+      background-image: url(../img/ilya-mashkov-_qxbJUr9RqI-unsplash.jpg);
+      background-size: 275%;
+      height: 100%;
+      overflow: visible;
+      background-repeat: repeat;
+      background-position: -386px 0px;
+    }
+
+  .add-burger {
+    position: relative;
+    top: -9px;
+  }
+
+  #burgerInput {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  .title {
+    padding: 20px;
+    font-size: 5rem;
+    padding-bottom: 60px;
+  }
+
+  .eat-burger {
+    height:50px;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  .sect {
+    margin: 50px;
+  }
+
+  .bork {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .delete-burger {
+    top: 0px;
+    right: 40%;
+    height: 40px;
+  }
+
+  .minus {
+    display: none;
+  }
+
+  .eaten {
+    margin: 0;
+  }
+
+
+  }
+
+
+  @media only screen and (max-width: 400px) {
+    body {
+      font-family: 'Alfa Slab One', cursive;
+      font-size: 4rem;
+      background-image: url(../img/ilya-mashkov-_qxbJUr9RqI-unsplash.jpg);
+      background-size: 275%;
+      height: 100%;
+      overflow: visible;
+      background-repeat: repeat;
+      background-position: -386px 0px;
+    }
+
+  .add-burger {
+    position: relative;
+    top: -9px;
+  }
+
+  #burgerInput {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  .title {
+    padding: 20px;
+    font-size: 5rem;
+    padding-bottom: 60px;
+  }
+
+  .eat-burger {
+    height:50px;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  .sect {
+    margin: 50px;
+  }
+
+  .bork {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .delete-burger {
+    top: 50px;
+    right: 40%;
+    height: 40px;
+  }
+
+  .minus {
+    display: none;
+  }
+
+  .eaten {
+    margin: 0;
+  }
+
+
+  }
