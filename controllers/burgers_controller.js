@@ -44,3 +44,19 @@ module.exports = function (app) {
         }
       });
     });
+
+      // Delete burger entry in db
+  app.delete("/api/burgers/:id", function(req, res){
+    var condition = {id: `${req.params.id}`};
+    db.burgers.destroy({
+      where: condition
+    }).then (function(result){
+      if (result.affectedRows == 0){
+        return res.status(404).end();
+      }
+      else{
+        res.status(200).end();
+      }
+    })
+  })
+}
