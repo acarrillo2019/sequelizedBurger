@@ -21,31 +21,31 @@ module.exports = function (app) {
     })
   });
 
-    // Add customer to db
-    app.post("/api/customers", function(req, res){
-      db.customers.create({
-        customer_name: req.body.customer_name
-      }).then (function(cb) {
-        res.status(200).end();
-      })
-    });
-  
-    // Update burger entry in db
-    app.put("/api/burgers/:id", function(req, res){
-      var condition = {id: `${req.params.id}`};
-      db.burgers.update({devoured: req.body.devoured}, {
-        where: condition
-      }).then (function(result){
-        if (result.changedRows == 0){
-          return res.status(404).end();
-        }
-        else{
-          res.status(200).end();
-        }
-      });
-    });
+  // Add customer to db
+  app.post("/api/customers", function(req, res){
+    db.customers.create({
+      customer_name: req.body.customer_name
+    }).then (function(cb) {
+      res.status(200).end();
+    })
+  });
 
-      // Delete burger entry in db
+  // Update burger entry in db
+  app.put("/api/burgers/:id", function(req, res){
+    var condition = {id: `${req.params.id}`};
+    db.burgers.update({devoured: req.body.devoured}, {
+      where: condition
+    }).then (function(result){
+      if (result.changedRows == 0){
+        return res.status(404).end();
+      }
+      else{
+        res.status(200).end();
+      }
+    });
+  });
+
+  // Delete burger entry in db
   app.delete("/api/burgers/:id", function(req, res){
     var condition = {id: `${req.params.id}`};
     db.burgers.destroy({
