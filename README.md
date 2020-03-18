@@ -10,7 +10,7 @@ Following MVC design pattern, create an application using MySQL, Node, Express, 
 
 The Yum Yum Burger site will let users add burgers to a list of consumable burgers. By clicking on the burger icon, the user 'consumes' the burger. The burger is then removed from the menu and added to the 'Devoured' list. Once on the devoured list, the user can delete the burger by clicking on the trash icon.
 
-Link to app deployed on Heroku: [Yum Yum Burger App]()
+Link to app deployed on Heroku: [Yum Yum Burger App](https://protected-depths-02857.herokuapp.com/)
 
 ## Tools ##
 
