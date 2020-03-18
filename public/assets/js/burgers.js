@@ -82,32 +82,30 @@ $(document).ready(function(){
     );
   });
 
+ // Delete burger from devoured list
+ $(".delete-burger").on("click", function(event) {
+  event.preventDefault();
 
+  var id = $(this).data("id");
 
-  $(".delete-burger").on("click", function(event) {
-    event.preventDefault();
-
-    var id = $(this).data("id");
-
-    console.log(`delete id: ${id}`)
-
-    // Send the DELETE request.
-    $.ajax(`/api/burgers/${id}`, {
-      type: "DELETE"
-    }).then(
-      function() {
-        console.log("Deleted Burger", id);
-        location.reload();
-    })
+  // Send the DELETE request.
+  $.ajax(`/api/burgers/${id}`, {
+    type: "DELETE"
+  }).then(
+    function() {
+      console.log("Deleted Burger", id);
+      location.reload();
   })
+})
 
-  function validateForm() {
-    var isValid = true;
-    $('.validate').each(function () {
-        if ($(this).val() === "") {
-            isValid = false;
-        }
-    });
-    return isValid;
-  }
+// Return true if form not blank, else return false
+function validateForm() {
+  var isValid = true;
+  $('.validate').each(function () {
+      if ($(this).val() === "") {
+          isValid = false;
+      }
+  });
+  return isValid;
+}
 })
