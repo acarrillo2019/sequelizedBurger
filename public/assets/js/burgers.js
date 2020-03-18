@@ -1,5 +1,6 @@
 // Static JS
 $(document).ready(function(){
+  // Add Burger
   $(".add-burger").on("click", function(event) {
     event.preventDefault();
 
@@ -26,28 +27,25 @@ $(document).ready(function(){
     }
   });
 
+  // Close alert
   $('.close').click(function() {
     $('.alert').hide();
   })
 
-  $(".eat-burger").on("click", function(event) {
-    event.preventDefault();
-
-    var id = $(this).data("id");
-    var eaten = {devoured: true};
-
-    // Send the PUT request.
-    $.ajax(`/api/burgers/${id}`, {
-      type: "PUT",
-      data: eaten
-    }).then(
-      function() {
-        console.log("Updated Burger", id);
-        // Reload the page to get the updated list
-        location.reload();
-      }
-    );
-  });
+    // Eat Burger - Display Modal to enter customer name
+    $(".eat-burger").on("click", function(event) {
+      event.preventDefault();
+      console.log('modal')
+      // Pop up modal to enter name
+      $(".modal-title").text("Who's Eating the Burger?");
+      $(".modal-body").html(`<form>`
+          +`<div class='form-group'>`
+          +`<label for='customerName' class='col-form-label'>Enter name:</label>`
+          +`<input type='text' class='form-control' id='customerName' value=''>`
+          +`</div>`);
+  
+      $("#saveChanges").attr("data-key",$(this).data("id"));
+    });
 
   $(".delete-burger").on("click", function(event) {
     event.preventDefault();
