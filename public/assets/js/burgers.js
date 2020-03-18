@@ -47,6 +47,43 @@ $(document).ready(function(){
       $("#saveChanges").attr("data-key",$(this).data("id"));
     });
 
+     // Save customer name and update burger status
+  $("#saveChanges").on("click", function(event) {
+    event.preventDefault();
+
+    var newCustomer = {
+      customer_name: $("#customerName").val().trim(),
+    };
+
+    // Send the POST request.
+    $.ajax("/api/customers", {
+      type: "POST",
+      data: newCustomer
+    }).then(
+      function() {
+        console.log("Customer ate a burger");
+      }
+    );
+
+
+    var id = $(this).attr("data-key");
+    var eaten = {devoured: true};
+
+    // Send the PUT request.
+    $.ajax(`/api/burgers/${id}`, {
+      type: "PUT",
+      data: eaten
+    }).then(
+      function() {
+        console.log("Updated Burger", id);
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });
+
+
+
   $(".delete-burger").on("click", function(event) {
     event.preventDefault();
 
