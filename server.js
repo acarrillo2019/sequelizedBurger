@@ -29,7 +29,7 @@ require("./controllers/burgers_controller")(app);
 // Start server to listen to client requests.
 
 // Sync sequelize models and then start server to listen to client requests.
-// ____________________________________________________________________________________
+
 db.sequelize.sync({ force: true }).then(function() {
   app.listen(PORT, function() {
     // Log (server-side) when the server has started
