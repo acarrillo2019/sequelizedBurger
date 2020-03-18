@@ -21,7 +21,7 @@
 			<hr>
 			{{#each burgers}}
 				{{#if devoured}}
-					{{> burgers/burger-block eaten=true}}
+					{{> burgers/burger-block this}}
 				{{/if}}
 			{{/each}}
 		</div>
@@ -46,4 +46,30 @@
   		</div>
 		</form>
 	</div>
+
+
+	{{!-- Modal --}}
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      {{!-- Modal content --}}
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title"></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="saveChanges" class="btn btn-success" data-dismiss="modal" data-key="">Eat Burger</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
 </div>
