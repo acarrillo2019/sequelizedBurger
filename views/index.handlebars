@@ -12,7 +12,7 @@
 			<hr>
 			{{#each burgers}}
 				{{#unless devoured}}
-					{{> burgers/burger-block eaten=false}}
+					{{> burgers/burger-block this}}
 				{{/unless}}
 			{{/each}}
 		</div>{{!-- Burgers that have been devoured --}}
