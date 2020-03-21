@@ -10,15 +10,6 @@
   "scripts": {
     "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/acarrillo2019/sequelizedBurger"
-  },
-  "author": "Alfred Carrillo",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/acarrillo2019/sequelizedBurger/issues"
-  },
   "homepage": "https://github.com/acarrillo2019/sequelizedBurger#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
