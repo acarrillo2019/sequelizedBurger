@@ -4,9 +4,9 @@
 
 ## Description ##
 
-The Yum Yum Burger app folllows a MVC design pattern, created using MySQL, Node, Express, Handlebars and Sequelize to display burger options and log burger consumption.
+Yum Yum Burger is a full-stack app that follows an MVC design pattern, created using MySQL, Node, Express, Handlebars and Sequelize to display burger options and log burger consumption.
 
-The Yum Yum Burger site will let users add burgers to a list of consumable burgers. By clicking on the burger icon, the user 'consumes' the burger. The burger is then removed from the menu and added to the 'Devoured' list. Once on the devoured list, the user can delete the burger by clicking on the trash icon.
+The Yum Yum Burger site will let users add burgers to a list of consumable burgers. By clicking on the burger icon, the user 'consumes' the burger and is prompted for athe name of the person who wants to eat the burger. The burger is then removed from the menu and added to the 'Devoured' list. Once on the devoured list, the user can delete the burger by clicking on the trash icon.
 
 Link to app deployed on Heroku: [Yum Yum Burger App](https://protected-depths-02857.herokuapp.com/)
 
