@@ -1,5 +1,7 @@
 # Sequelized Burger
 
+![](/screenshots/yumyumscreenshot.PNG)
+
 ## Description ##
 
 The Yum Yum Burger app folllows a MVC design pattern, created using MySQL, Node, Express, Handlebars and Sequelize to display burger options and log burger consumption.
