@@ -60,6 +60,10 @@
   }
 
 
+.modal-title, .modal-body {
+  color: black;
+}
+
   @media only screen and (max-width: 1410px) {
     body {
       font-family: 'Alfa Slab One', cursive;
